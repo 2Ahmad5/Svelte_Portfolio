@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'BatmanForever';
+    src: url('/src/fonts/batmfa__.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'BatmanForever', sans-serif;
+  }
+  
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
