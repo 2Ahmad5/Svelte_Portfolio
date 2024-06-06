@@ -9,17 +9,17 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum djhfbv hjsbdv.</p>
     </div>
     <hr class="w-[30svh] h-0.5 mx-auto bg-white border-0 rounded my-4">
-    <div  href="/projects/+page.svelte" class="w-[20svh] h-[6svh] flex justify-center items-center border-2 text-[#a5a4a3] border-white rounded-3xl mt-5 gap-2 hover:bg-white hover:text-black group">
+    <a href="/src/routes/projects/+page.svelte" class="cursor-fancy w-[20svh] h-[6svh] flex justify-center items-center border-2 text-[#a5a4a3] border-white rounded-3xl mt-5 gap-2 hover:bg-white hover:text-black group">
         <div>
             <h2 class="transition-opacity duration-300 ease-in-out">Lets Go</h2>
         </div>
         <div class="transition-transform duration-300 ease-in-out transform group-hover:translate-x-[-160%]">
             <i class="fa-solid fa-angles-right"></i>
         </div>
-    </div>
+      </a>
 </div>
 
-<style lang="postcss">
+<style lang="css">
     @import '../app.css';
 
   :global(html, body) {
@@ -38,11 +38,7 @@
 
   /* border-b-gray-600 */
   h1{    
-    /* text-shadow:
-   -1px -1px 0 #f5e045,  
-    1px -1px 0 #f5e045,
-    -1px 1px 0 #f5e045,
-     1px 1px 0 #f5e045; */
+
     background: linear-gradient(90deg, #333 0%, #fff 40%, #333 100%);
     -webkit-background-clip: text;
             background-clip: text;
