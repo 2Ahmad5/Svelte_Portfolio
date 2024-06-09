@@ -17,6 +17,14 @@
             <i class="fa-solid fa-angles-right"></i>
         </div>
       </a>
+      <div class="w-full h-[5vh] mt-[2vh] bg-[#333333] absolute left-0 bottom-0 flex justify-center items-center">
+        <div class="text-white text-[1vh] md:text-sm w-full max-w-[40vw] min-w-[350px] grid grid-cols-4 items-center">
+            <p class="justify-self-center">Linkedin</p>
+            <p class="justify-self-center">Instagram</p>
+            <p class="justify-self-center">Email</p>
+            <p class="justify-self-center">Discord</p>
+        </div>
+    </div>
 </div>
 
 <style lang="css">
