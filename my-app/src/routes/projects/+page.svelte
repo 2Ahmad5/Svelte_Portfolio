@@ -40,89 +40,122 @@
     <script src="https://kit.fontawesome.com/467e545fea.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </svelte:head>
-
-<div class="flex cursor-fancy items-center w-full min-h-[100vh] flex-col gap-[30px]">
-    <div class="grid w-full text-[1vh] md:text-sm text-white pb-[5px] max-w-[50vw] min-w-[400px] grid-cols-4 border-b-white border-2 border-transparent mt-[10vh] absolute top-0">
-        <button class="hover:cursor-fancy {proj ? 'yes-click' : 'no-click'}" on:click={projectClick}>Projects</button>
-        <button class="hover:cursor-fancy {res ? 'yes-click' : 'no-click'}" on:click={resumeClick}>Resume</button>
-        <button class="hover:cursor-fancy {edu ? 'yes-click' : 'no-click'}" on:click={educationClick}>Education</button>
-        <button class="hover:cursor-fancy {abt ? 'yes-click' : 'no-click'}" on:click={aboutClick}>About Me</button>
-    </div>
+<div class="flex flex-col w-[100vw] gap-[0px]">
+    <div class="flex cursor-fancy items-center w-full min-h-[100vh] mb-[0px] flex-col">
+        <div class="grid w-full text-[1vh] md:text-sm text-white max-w-[50vw] min-w-[400px] grid-cols-4 border-b-white border-2 border-transparent mt-[15vh]">
+            <button class=" pb-[5px] pt-[5px] hover:cursor-fancy {proj ? 'yes-click' : 'no-click'}" on:click={projectClick}>Projects</button>
+            <button class="pb-[5px] pt-[5px] hover:cursor-fancy {res ? 'yes-click' : 'no-click'}" on:click={resumeClick}>Resume</button>
+            <button class="pb-[5px] pt-[5px] hover:cursor-fancy {edu ? 'yes-click' : 'no-click'}" on:click={educationClick}>Education</button>
+            <button class="pb-[5px] pt-[5px] hover:cursor-fancy {abt ? 'yes-click' : 'no-click'}" on:click={aboutClick}>About Me</button>
+        </div>
+        
+        <div class="{proj ? 'initial' : 'hidden'} flex gap-[2vh] flex-col items-center">
+        <h1 class="text-5xl mt-[5vh] mb-[2vh] text-center relative">Software Design and Web Dev</h1>
+        <div class="smallonly hidden">
+            <div class="w-[85vw] h-[20vh] retro rounded-xl"></div>
+            <div class="max-w-[85vw] bg-[#404040] p-[15px] rounded-xl text-justify text-sm mt-[2vh]">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="w-[85vw] h-[20vh] nuwrld rounded-xl mt-[2vh]"></div>
+            <div class="max-w-[85vw] bg-[#404040] p-[15px] rounded-xl text-justify text-sm mt-[2vh]">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+        <div class="flex gap-[2vw] bigonly">
+            <a href="https://sivepanda.github.io/tsawebmaster23/" class="rot hover:shadow-[-4px_6px_10px_0_rgba(0,0,0,0.6)] retro w-[35vw] h-[30vh] rounded-xl max-w-[600px] cursor-fancy hover:-translate-y-3 ease-in-out duration-200"></a>
+            <div class="max-w-[35vw] bg-[#404040] p-[15px] rounded-xl text-justify text-sm">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+        <div class="flex gap-[2vw] bigonly">
+            <div class="max-w-[35vw] bg-[#404040] p-[15px] rounded-xl text-justify text-sm ease-in-out duration-200">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <a href="https://sivepanda.github.io/tsawebmaster22/public_html/" class="roty hover:shadow-[4px_6px_10px_0_rgba(0,0,0,0.6)] nuwrld w-[35vw] h-[30vh] rounded-xl max-w-[600px] cursor-fancy hover:-translate-y-3 ease-in-out duration-200"></a>
+            
+        </div>
+        <h1 class="text-5xl mt-[5vh] mb-[2vh] text-center">Machine Learning</h1>
+        <div class="flex  xl:flex-row flex-col items-center justify-center mb-[30px]">
+            <div class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh]">
     
-    <div class="{proj ? 'initial' : 'hidden'} flex gap-[2vh] flex-col items-center">
-    <h1 class="text-5xl mt-[25vh] mb-[2vh] text-center">Software Design and Web Dev</h1>
-    <div class="smallonly hidden">
-        <div class="w-[85vw] h-[20vh] retro rounded-xl"></div>
-        <div class="max-w-[85vw] bg-[#404040] p-[15px] rounded-xl text-justify text-sm mt-[2vh]">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <i class="fa-solid fa-basketball text-4xl pt-[10%]" style="color: #ffffff;"></i>
+                
+                <h3 class="text-[white] text-sm">NBA Gambling Model</h3>
+                <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="xl:w-[2px] xl:h-[25vh] w-[40vw] h-[2px] rounded-lg bg-white my-[1vh] mx-[1vw]"></div>
+            <div class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh]">
+    
+                <i class="fa-solid fa-network-wired text-4xl pt-[10%]" style="color: #ffffff;"></i>
+                
+                <h3 class="text-[white] text-sm">Robotics Match Predictor</h3>
+                <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="xl:w-[2px] xl:h-[25vh] w-[40vw] h-[2px] rounded-lg bg-white my-[1vh] mx-[1vw]"></div>
+    
+            <div class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh]">
+    
+                <i class="fa-solid fa-diagram-project text-4xl pt-[10%]" style="color: #ffffff;"></i>
+                
+                <h3 class="text-[white] text-sm">K-Means Clustering</h3>
+                <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
         </div>
-        <div class="w-[85vw] h-[20vh] nuwrld rounded-xl mt-[2vh]"></div>
-        <div class="max-w-[85vw] bg-[#404040] p-[15px] rounded-xl text-justify text-sm mt-[2vh]">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-    </div>
-    <div class="flex gap-[2vw] bigonly">
-        <a href="https://sivepanda.github.io/tsawebmaster23/" class="rot hover:shadow-[-4px_6px_10px_0_rgba(0,0,0,0.6)] retro w-[35vw] h-[30vh] rounded-xl max-w-[600px] cursor-fancy hover:-translate-y-3 ease-in-out duration-200"></a>
-        <div class="max-w-[35vw] bg-[#404040] p-[15px] rounded-xl text-justify text-sm">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+        <div class="{res ? 'initial' : 'hidden'} grid grid-cols-2 arranged h-full w-[100vw] justify-items-center">
+            <div class="flex flex-col">
+                <h1 class="text-5xl mt-[5vh] text-center">Resume</h1>
+                <a href="../../media/Resume (Ahmad Choudhary) (1).pdf"download on:mouseenter={() => {resume_hidden = true;}} on:mouseleave={() => {resume_hidden = false;}} class="resume-contain rounded-xl mt-[2vh] relative">
+                    
+                    <div class="{!resume_hidden ? 'opacity-100' : 'opacity-0'} convert resume-bkg w-[461px] h-[564px] rounded-xl"></div>
+                    
+                </a>
+                
+                
+            </div>
+            <div>
+                <h1 class="text-5xl convert-top mt-[5vh] text-center">Skillset</h1>
+                    <div class="text-white mt-[2vh] text-5xl text-center bg-[#404040] rounded-xl p-[10px] convert-skills w-[45vw]">
+                        <h3 class="text-base">Programming</h3>
+                        <p class="text-xs">*Not all shown</p>
+                        <i class="fa-brands fa-python"></i>
+                        <i class="fa-brands fa-java"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-aws"></i>
+                        <i class="fa-brands fa-react"></i>
+                        <i class="fa-brands fa-node"></i>
+                        <i class="fa-brands fa-cloudflare"></i>
+                        <i class="fa-brands fa-linux"></i>
+                    </div>
+                    <div class=" mt-[2vh] text-center bg-[#404040] rounded-xl p-[10px] convert-skills w-[45vw]">
+                        <h3 class="text-base text-white">Courses</h3>
+                        <p>Data Structures and Algorithms, Discrete Math, Linear Algebra, Advanced Multivariable Calculus, Design and Analysis of Algorithms, Computer Architecture, Probability, Database Systems, Machine Learning</p>
+                    </div>
+                    <div class="mt-[2vh] text-center bg-[#404040] rounded-xl p-[10px] convert-skills w-[45vw]">
+                        <h3 class="text-base text-white">Achievments</h3>
+                        <p>Finalist in  Duke DataFest - Utilized techniques of ML to find the optimal study plan for students</p>
+                        <br>
+                        <p>Honarable Mention in Math Modeling - Used Data Science to find the most negatively affected areas in NC</p>
+                        <br>
+                        <p>FIRST Robotics International Competitor - All forms of engineering used to qualify out of over 9000 teams</p>
+                    </div>
+    
+            </div>
         </div>
-    </div>
-    <div class="flex gap-[2vw] bigonly">
-        <div class="max-w-[35vw] bg-[#404040] p-[15px] rounded-xl text-justify text-sm ease-in-out duration-200">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+        <div class="{edu ? 'initial' : 'hidden'} overflow-hidden flex flex-col min-h-[75vh] justify-center items-center">
+            <h1 class="text-5xl text-center glow-img mt-[5vh] mb-[5vh]">Duke<br>University</h1>
+            <h3 class="text-white items-self-center">Degree: Bachelors in Computer Science</h3>
+            
         </div>
-        <a href="https://sivepanda.github.io/tsawebmaster22/public_html/" class="roty hover:shadow-[4px_6px_10px_0_rgba(0,0,0,0.6)] nuwrld w-[35vw] h-[30vh] rounded-xl max-w-[600px] cursor-fancy hover:-translate-y-3 ease-in-out duration-200"></a>
+        <div class="{abt ? 'initial' : 'hidden'}">asd</div>
+        
         
     </div>
-    <h1 class="text-5xl mt-[5vh] mb-[2vh] text-center">Machine Learning</h1>
-    <div class="flex  xl:flex-row flex-col items-center justify-center">
-        <div class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh]">
-
-            <i class="fa-solid fa-basketball text-4xl pt-[10%]" style="color: #ffffff;"></i>
-            
-            <h3 class="text-[white] text-sm">NBA Gambling Model</h3>
-            <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="xl:w-[2px] xl:h-[25vh] w-[40vw] h-[2px] rounded-lg bg-white my-[1vh] mx-[1vw]"></div>
-        <div class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh]">
-
-            <i class="fa-solid fa-network-wired text-4xl pt-[10%]" style="color: #ffffff;"></i>
-            
-            <h3 class="text-[white] text-sm">Robotics Match Predictor</h3>
-            <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="xl:w-[2px] xl:h-[25vh] w-[40vw] h-[2px] rounded-lg bg-white my-[1vh] mx-[1vw]"></div>
-
-        <div class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh]">
-
-            <i class="fa-solid fa-diagram-project text-4xl pt-[10%]" style="color: #ffffff;"></i>
-            
-            <h3 class="text-[white] text-sm">K-Means Clustering</h3>
-            <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="{res ? 'initial' : 'hidden'} grid grid-cols-2 h-full w-full justify-items-center">
-        <div class="flex flex-col">
-            <h1 class="text-5xl mt-[25vh] text-center">Resume</h1>
-            <a href="../../media/Resume (Ahmad Choudhary) (1).pdf"download on:mouseenter={() => {resume_hidden = true;}} on:mouseleave={() => {resume_hidden = false;}} class="resume-contain rounded-xl mt-[2vh] relative">
-                
-                <div class="{!resume_hidden ? 'opacity-100' : 'opacity-0'} resume-bkg w-[25vw] h-[70vh] rounded-xl"></div>
-                
-            </a>
-            
-            
-        </div>
-        <div>
-            <h1 class="text-5xl mt-[25vh] text-center">Skillset</h1>
-        </div>
-    </div>
-
-    <div  class="{edu ? 'initial' : 'hidden'}">vbc</div>
-    <div class="{abt ? 'initial' : 'hidden'}">asd</div>
-    
-    <div class="w-full h-[5vh] bg-[#333333] flex justify-center items-center relative">
+    <div class="w-full h-[5vh] bg-[#333333] flex justify-center items-center sticky bottom-0">
         <div class="text-[1vh] md:text-sm w-full max-w-[40vw] min-w-[350px] grid grid-cols-4 items-center absolute bottom-0">
             <p class="text-white mb-[1.5vh] justify-self-center">Linkedin</p>
             <p class="text-white  mb-[1.5vh] justify-self-center">Instagram</p>
@@ -131,6 +164,7 @@
         </div>
     </div>
 </div>
+
 
 
 
@@ -145,7 +179,28 @@
         .smallonly{
             display: initial;
         }
+        .arranged{
+            grid-template-rows: 2;
+            grid-template-columns: none;
+        }
+        .convert-skills{
+            width: 90vw;
+        }
+        .convert-top{
+            margin-top: 5vh;
+        }
+
     }
+
+    @media only screen and (max-width: 430px){
+        .convert{
+            width: 90vw;
+            height: 60vh;
+        }
+        
+    }    
+
+    
 
     .resume-bkg{
         background: url('../../media/AhmadResume.png');
@@ -169,7 +224,14 @@
     } */
 
     .yes-click{
+        /* transition: all .2s ease-in-out; */
         color: white;
+        border: 2px solid white;
+        height: 100%;
+        border-bottom: none;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        /* border-left: white; */
     }
    
     .no-click{
@@ -205,9 +267,12 @@
 
     :global(body) {
         cursor: url('../../media/white_dot.png'), pointer;
+        overflow-x: hidden;
         min-height: 100vh;
         display: flex;
         justify-content: center;
+        margin-top: 0px;
+        padding-top: 0px;
         align-items: center;
         background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
         background-size: cover;
