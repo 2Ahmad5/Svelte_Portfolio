@@ -6,7 +6,7 @@
 <div class="w-screen h-full flex flex-col justify-center items-center cursor-fancy overflow-x-hidden">
     <h1 class="text-5xl text-center mb-5">Ahmad Choudhary</h1>
     <hr class="w-[30svh] h-0.5 mx-auto bg-white border-0 rounded my-4">
-    <div class="max-w-[450px] px-5 text-justify text-white text-sm">
+    <div class="max-w-[450px] px-5 text-justify text-white text-lg">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum djhfbv hjsbdv.</p>
     </div>
     <hr class="w-[30svh] h-0.5 mx-auto bg-white border-0 rounded my-4">
@@ -14,7 +14,7 @@
         <div>
             <h2 class="transition-opacity duration-300 ease-in-out">Lets Go</h2>
         </div>
-        <div class="transition-transform duration-300 ease-in-out transform group-hover:translate-x-[-160%]">
+        <div class="transition-transform duration-300 ease-in-out transform">
             <i class="fa-solid fa-angles-right"></i>
         </div>
       </a>
@@ -59,12 +59,19 @@
   }
 
   .group:hover h2 {
-    opacity: 0;
+    /* opacity: 0;
+     */
+     display: none;
+  }
+  
+  i{
+    transition: all .2s ease-in-out;
   }
 
   .group:hover i {
-    /* transform: translateX(-35%); */
-    font-size: 2.7svh;
+    /* position: relative; */
+    /* transform: translateX(-50%); */
+    font-size: 3svh;
   }
   
 </style>
