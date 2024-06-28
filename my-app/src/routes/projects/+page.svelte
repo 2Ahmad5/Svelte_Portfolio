@@ -3,7 +3,153 @@
   import { fly } from 'svelte/transition';
   import IntersectionObserver from "svelte-intersection-observer";
   import { fade } from "svelte/transition";
-  let node;
+  import { onMount } from 'svelte';
+  import inView from '../../components/inView';
+
+onMount(() => {
+  if (!window.location.hash) {
+    window.location.hash = 'loaded';
+    window.location.reload();
+  }
+});
+
+let cardElements;
+  let isVisible1 = false;
+  let isVisible2 = false;
+  let isVisible3 = false;
+
+  const showCard1 = () => {
+    isVisible1 = true;
+  };
+
+  const hideCard1 = () => {
+    isVisible1 = false;
+  };
+
+  const showCard2 = () => {
+    isVisible2 = true;
+  };
+
+  const hideCard2 = () => {
+    isVisible2 = false;
+  };
+
+  const showCard3 = () => {
+    isVisible3 = true;
+  };
+
+  const hideCard3 = () => {
+    isVisible3 = false;
+  };
+
+  onMount(() => {
+    cardElements = document.querySelectorAll('.cards');
+  });
+
+  function rotateRight() {
+    // Rotate positions: left -> center -> right -> back to left
+    let leftElement = cardElements[0];
+    let centerElement = cardElements[1];
+    let rightElement = cardElements[2];
+
+    leftElement.classList.remove('lefter');
+    leftElement.classList.add('center');
+    centerElement.classList.remove('center');
+    centerElement.classList.add('righter');
+    rightElement.classList.remove('righter');
+    rightElement.classList.add('lefter');
+
+    let leftUniemElements = leftElement.getElementsByClassName('uniem');
+    if (leftUniemElements.length > 0) {
+      leftUniemElements[0].classList.add('mid');
+    }
+    let centerUniemElements = centerElement.getElementsByClassName('uniem');
+    if (centerUniemElements.length > 0) {
+      centerUniemElements[0].classList.remove('mid');
+    }
+
+    let leftReseElements = leftElement.getElementsByClassName('rese');
+    if (leftReseElements.length > 0) {
+      leftReseElements[0].classList.remove('mid');
+      leftReseElements[0].classList.add('try');
+    }
+    let centerReseElements = centerElement.getElementsByClassName('rese');
+    if (centerReseElements.length > 0) {
+      centerReseElements[0].classList.add('mid');
+    }
+
+    cardElements = [rightElement, leftElement, centerElement];
+  }
+
+  function rotateLeft() {
+    // Rotate positions: right -> center -> left -> back to right
+    let leftElement = cardElements[0];
+    let centerElement = cardElements[1];
+    let rightElement = cardElements[2];
+
+    leftElement.classList.remove('lefter');
+    leftElement.classList.add('righter');
+    centerElement.classList.remove('center');
+    centerElement.classList.add('lefter');
+    rightElement.classList.remove('righter');
+    rightElement.classList.add('center');
+
+    let centerUniemElements = centerElement.getElementsByClassName('uniem');
+    if (centerUniemElements.length > 0) {
+      centerUniemElements[0].classList.remove('mid');
+    }
+    let rightUniemElements = rightElement.getElementsByClassName('uniem');
+    if (rightUniemElements.length > 0) {
+      rightUniemElements[0].classList.add('mid');
+    }
+
+    let centerReseElements = centerElement.getElementsByClassName('rese');
+    if (centerReseElements.length > 0) {
+      centerReseElements[0].classList.add('mid');
+      centerReseElements[0].classList.remove('try');
+    }
+    let rightReseElements = rightElement.getElementsByClassName('rese');
+    if (rightReseElements.length > 0) {
+      rightReseElements[0].classList.remove('mid');
+    }
+
+    cardElements = [centerElement, rightElement, leftElement];
+  }
+
+  function handleKeydown(event, direction) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      direction === 'right' ? rotateRight() : rotateLeft();
+    }
+  }
+  
+let visible1 = false;
+  let visible2 = false;
+  let visible3 = false;
+
+  const handleEnter1 = () => {
+    visible1 = true;
+  };
+
+  const handleExit1 = () => {
+    visible1 = false;
+  };
+
+  const handleEnter2 = () => {
+    visible2 = true;
+  };
+
+  const handleExit2 = () => {
+    visible2 = false;
+  };
+
+  const handleEnter3 = () => {
+    visible3 = true;
+  };
+
+  const handleExit3 = () => {
+    visible3 = false;
+  };
 
 
   let resume_hidden = false;
@@ -210,78 +356,62 @@
       <div
         class="flex xl:flex-row flex-col items-center justify-center mb-[30px] gap-[2vw]"
       >
-      <IntersectionObserver element={node} let:intersecting>
-        <div bind:this={node}>
-        {#if intersecting}
-        <div transition:fly={{x: 100, opacity: 0, duration: 700}} class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh]"
-        >
-        
-          <i
-            class="fa-solid fa-basketball text-4xl pt-[10%]"
-            style="color: #ffffff;"
-          ></i>
+      <div
+      use:inView
+      on:enter={handleEnter1}
+      on:exit={handleExit1}
+      class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh] transition-transform"
+      class:visible={visible1}
+      class:invisible={!visible1}
+    >
+      <i class="fa-solid fa-basketball text-4xl pt-[10%]" style="color: #ffffff;"></i>
+      <h3 class="text-[white] text-base">NBA Gambling Model</h3>
+      <p class="text-sm">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </div>
+    
+    <div
+      use:inView
+      on:enter={handleEnter2}
+      on:exit={handleExit2}
+      class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh] transition-transform"
+      class:visible={visible2}
+      class:invisible={!visible2}
+      style="transition-delay: 0.15s;"
+    >
+      <i class="fa-solid fa-network-wired text-4xl pt-[10%]" style="color: #ffffff;"></i>
+      <h3 class="text-[white] text-base">Robotics Match Predictor</h3>
+      <p class="text-sm">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </div>
+    
+    <div
+      use:inView
+      on:enter={handleEnter3}
+      on:exit={handleExit3}
+      class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh] transition-transform"
+      class:visible={visible3}
+      class:invisible={!visible3}
+      style="transition-delay: 0.3s;"
+    >
+      <i class="fa-solid fa-diagram-project text-4xl pt-[10%]" style="color: #ffffff;"></i>
+      <h3 class="text-[white] text-base">K-Means Clustering</h3>
+      <p class="text-sm">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </div>
 
-          <h3 class=" text-[white] text-base">NBA Gambling Model</h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        
-        </div>
-        {/if}
-      </div>
-      </IntersectionObserver>
-        
-        <!-- <div
-          class="xl:w-[2px] xl:h-[25vh] w-[40vw] h-[2px] rounded-lg bg-white my-[1vh] mx-[1vw]"
-        ></div> -->
-      <IntersectionObserver element={node} let:intersecting>
-        <div bind:this={node}>
-          {#if intersecting}
-        <div transition:fly={{x: 100, opacity: 0, duration: 700, delay: 250}} class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh]"
-        >
-          <i
-            class="fa-solid fa-network-wired text-4xl pt-[10%]"
-            style="color: #ffffff;"
-          ></i>
-
-          <h3 class="text-[white] text-base">Robotics Match Predictor</h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        </div>
-        {/if}
-      </div>
-      </IntersectionObserver>
-        <!-- <div
-          class="xl:w-[2px] xl:h-[25vh] w-[40vw] h-[2px] rounded-lg bg-white my-[1vh] mx-[1vw]"
-        ></div> -->
-        <IntersectionObserver element={node} let:intersecting>
-          <div bind:this={node}>
-            {#if intersecting}
-        <div transition:fly={{x: 100, opacity: 0, duration: 700, delay: 500}} class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh]"
-        >
-          <i
-            class="fa-solid fa-diagram-project text-4xl pt-[10%]"
-            style="color: #ffffff;"
-          ></i>
-
-          <h3 class="text-[white] text-base">K-Means Clustering</h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        </div>
-        {/if}
-      </div>
-      </IntersectionObserver>
     </div>
 
     </div>
@@ -441,6 +571,118 @@
         </div>
       </div>
     
+      <div class="education bigonly text-xs" id="dchap">
+        <div class="temp">
+          <div class="dinfo">
+            <button class="cards lefter" on:click={rotateRight} on:keydown={(event) => handleKeydown(event, 'right')}>
+              <div class="uniem"></div>
+              <h2>Resume</h2>
+              <div class="rese mid">
+                <div class="lab">
+                  <p><span>Dark Matter Particle Research AI</span></p>
+                  <p>
+                    Learning unsupervised AI integration to train models to accurately
+                    predict decaying particle’s paths and movements.
+                    <br /><br />
+                    Coding in C/C++ to convert code into physical microchips while
+                    maintaining efficiency in runtime and costs for the optimal
+                    production.
+                  </p>
+                </div>
+                <div class="lab">
+                  <p><span>Quantitative Improvement of CT Imaging for Lung Diseases</span></p>
+                  <p>
+                    Utilizing software programs such as FEBio to model realistic lung
+                    designs in order to detect virus movements given different
+                    pressure loads.
+                    <br /><br />
+                    C++ program written in order to debug and create the tools
+                    necessary for testing.
+                  </p>
+                </div>
+              </div>
+            </button>
+      
+            <button class="cards center" on:click={rotateRight} on:keydown={(event) => handleKeydown(event, 'right')}>
+              <div class="uniem mid"></div>
+              <h2>Research</h2>
+              <div class="rese">
+                <div class="lab">
+                  <p><span>Dark Matter Particle Research AI</span></p>
+                  <p>
+                    Learning unsupervised AI integration to train models to accurately
+                    predict decaying particle’s paths and movements.
+                    <br /><br />
+                    Coding in C/C++ to convert code into physical microchips while
+                    maintaining efficiency in runtime and costs for the optimal
+                    production.
+                  </p>
+                </div>
+                <div class="lab">
+                  <p><span>Quantitative Improvement of CT Imaging for Lung Diseases</span></p>
+                  <p>
+                    Utilizing software programs such as FEBio to model realistic lung
+                    designs in order to detect virus movements given different
+                    pressure loads.
+                    <br /><br />
+                    C++ program written in order to debug and create the tools
+                    necessary for testing.
+                  </p>
+                </div>
+              </div>
+            </button>
+      
+            <button class="cards righter" on:click={rotateRight} on:keydown={(event) => handleKeydown(event, 'right')}>
+              <div class="uniem"></div>
+              <h2>Internships</h2>
+              <div class="rese mid">
+                <div class="lab">
+                  <p><span>Dark Matter Particle Research AI</span></p>
+                  <p>
+                    Learning unsupervised AI integration to train models to accurately
+                    predict decaying particle’s paths and movements.
+                    <br /><br />
+                    Coding in C/C++ to convert code into physical microchips while
+                    maintaining efficiency in runtime and costs for the optimal
+                    production.
+                  </p>
+                </div>
+                <div class="lab">
+                  <p><span>Quantitative Improvement of CT Imaging for Lung Diseases</span></p>
+                  <p>
+                    Utilizing software programs such as FEBio to model realistic lung
+                    designs in order to detect virus movements given different
+                    pressure loads.
+                    <br /><br />
+                    C++ program written in order to debug and create the tools
+                    necessary for testing.
+                  </p>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="arrows">
+            <div 
+              class="fa-solid fa-arrow-left" 
+              style="color: #ffffff;" 
+              on:click={rotateLeft} 
+              on:keydown={(event) => handleKeydown(event, 'left')}
+              tabindex="0"
+              role="button"
+              aria-label="Rotate left"
+            ></div>
+            <div 
+              class="fa-solid fa-arrow-right" 
+              style="color: #ffffff;" 
+              on:click={rotateRight} 
+              on:keydown={(event) => handleKeydown(event, 'right')}
+              tabindex="0"
+              role="button"
+              aria-label="Rotate right"
+            ></div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#000000" fill-opacity="1" d="M0,64L48,69.3C96,75,192,85,288,117.3C384,149,480,203,576,192C672,181,768,107,864,80C960,53,1056,75,1152,74.7C1248,75,1344,53,1392,42.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
@@ -478,6 +720,149 @@
 
 <style lang="css">
   @import "../../app.css";
+
+
+.temp{
+    position: relative;
+}
+
+
+
+
+.dinfo {
+    position: relative;
+    left: 30%;
+    margin: 0px;
+    width: 75vw; /* Adjust as needed, or set a specific width */
+    perspective: 1000px;
+    display: grid;
+    margin-top: 10vh;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cards {
+    background: rgba( 0, 83, 155, 0.2);
+    border-radius: 16px;
+    box-shadow: 3px 4px 30px rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 40vh; 
+    width: 25vw; 
+    /* margin-left: 15vw; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    transition: 1s ease;
+    position: absolute;
+    /* top: 25%; */
+    transform-style: preserve-3d;
+    row-gap: 3vh;
+  }
+
+  .cards h2{
+    align-self: center;
+  }
+
+  .cards p{
+    margin-left: 2vw;
+  }
+  
+  /* The starting positions for the cards */
+  .lefter { 
+    left: 0%; 
+    transform: translateX(-80%) perspective(1000px) rotate3d(-1, -14, 0, 10deg);
+}
+  .center { 
+    left: 45%;
+    transform: translateX(-105%) rotateY(0deg) translateY(-20%);
+    height: 60vh;
+
+}
+  .righter {
+    left: 65%; transform: translateX(-54%) perspective(1000px) rotate3d(0, 1, 0, 10deg); 
+}
+
+.uniem{
+    height: 60%;
+    width: 100%;
+    background-image: url("../../media/Duke Emblem.png");
+    background-repeat: no-repeat;
+    background-size:50%;
+    background-position: center;
+}
+
+.cards h2{
+    font-size: 3rem;
+}
+
+.mid{
+    display: none !important;
+    opacity: 0;
+}
+
+.try{
+    opacity: 0;
+    animation-name: come;
+    animation-duration: .8s;
+    animation-delay: .8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes come {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.rese{
+    display: grid;
+    
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 4vh;
+}
+
+.rese span{
+    opacity: .7;
+}
+
+
+.lab{
+    display: grid;
+    grid-gap: 2vh;
+    max-width: 90%;
+}
+
+.arrows{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    /* height: 15vh; */
+    font-size: 3rem;
+    grid-gap: 5vw;
+}
+
+  .transition-transform {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .invisible {
+    opacity: 0;
+    transform: translateX(100px);
+  }
 
 @keyframes widen {
   from {
@@ -594,7 +979,7 @@
 
   .okla{
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../media/greyOK.png');
-    
+    background-attachment: fixed;
     background-size: cover;
   }
 
@@ -977,6 +1362,7 @@
     ); */
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../../media/black bkg.jpg');
     background-size: auto auto;
+    background-attachment: fixed;
   }
 
   .retro {
