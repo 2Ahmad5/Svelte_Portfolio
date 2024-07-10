@@ -19,7 +19,7 @@
         </div>
       </a>
       <div class="w-full h-[5vh] mt-[2vh] bg-[#333333] absolute left-0 bottom-0 flex justify-center items-center">
-        <div class="text-white text-[1vh] md:text-sm w-full max-w-[40vw] min-w-[350px] grid grid-cols-4 items-center">
+        <div class="text-[1vh] md:text-sm w-full max-w-[40vw] min-w-[350px] grid grid-cols-4 items-center absolute bottom-0">
           <a href="https://www.linkedin.com/in/ahmad-choudhary" class="text-white mb-[1.5vh] justify-self-center">Linkedin</a>
           <a href="https://www.instagram.com/ahmad.s.choudhary/" class="text-white mb-[1.5vh] justify-self-center">Instagram</a>
           <a href= "mailto: asc113@duke.edu" class="text-white mb-[1.5vh] justify-self-center">Email</a>
