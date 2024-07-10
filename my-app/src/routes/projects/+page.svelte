@@ -288,13 +288,8 @@ let visible1 = false;
           class="max-w-[85vw] bg-[#404040] p-[15px] rounded-xl text-justify text-sm mt-[2vh]"
         >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Retrograde was my second and last website I made in high school. With no frameworks used and barebones HTML, JS, and CSS, I learned a lot on how web design works from the ground up. The backend was especially difficult teaching me a lot about frameworks and how they function if used. In addition, the website used to be hosted using AWS which completed off the development process teaching me immensely about the cloud and how to get a project up and running for use. The project itself focuses on a space tourism company adapting to the new world. Click on it to find out more!
+
           </p>
         </div>
         <div class="w-[85vw] h-[20vh] nuwrld rounded-xl mt-[2vh]"></div>
@@ -302,13 +297,8 @@ let visible1 = false;
           class="max-w-[85vw] bg-[#404040] p-[15px] rounded-xl text-justify text-sm mt-[2vh]"
         >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            The Stock Investment Portfolio Project is something I am currently working on with an Economics Professor at Duke. The entirety of the frontend/backend is done by me using Svelte for the framework in a combination with the Flask API for python backend scripting. So far I have been able to run the algorithm efficiently and display its contents for the user to see but the full project is still a work in progress as I add more features. The plan is to use Vercel to host it sometime soon so if you are interested, be on the lookout.
+
           </p>
         </div>
       </div>
@@ -322,13 +312,7 @@ let visible1 = false;
             class="lroty max-w-[600px] w-[35vw] bg-[#404040] p-[15px] h-[30vh] rounded-xl text-justify text-base"
           >
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              Retrograde was my second and last website I made in high school. With no frameworks used and barebones HTML, JS, and CSS, I learned a lot on how web design works from the ground up. The backend was especially difficult teaching me a lot about frameworks and how they function if used. In addition, the website used to be hosted using AWS which completed off the development process teaching me immensely about the cloud and how to get a project up and running for use. The project itself focuses on a space tourism company adapting to the new world. Click on it to find out more!
             </p>
           </div>
         </div>
@@ -337,17 +321,11 @@ let visible1 = false;
             class="troty max-w-[600px] w-[35vw] bg-[#404040] p-[15px] rounded-xl text-justify text-base ease-in-out duration-200"
           >
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              The Stock Investment Portfolio Project is something I am currently working on with an Economics Professor at Duke. The entirety of the frontend/backend is done by me using Svelte for the framework in a combination with the Flask API for python backend scripting. So far I have been able to run the algorithm efficiently and display its contents for the user to see but the full project is still a work in progress as I add more features. The plan is to use Vercel to host it sometime soon so if you are interested, be on the lookout.
             </p>
           </div>
           <a
-            href="https://sivepanda.github.io/tsawebmaster22/public_html/"
+            
             class="roty hover:shadow-[4px_6px_10px_0_rgba(0,0,0,0.6)] nuwrld w-[35vw] h-[30vh] rounded-xl max-w-[600px] cursor-fancy ease-in-out duration-200"
           ></a>
         </div>
@@ -367,11 +345,7 @@ let visible1 = false;
       <i class="fa-solid fa-basketball text-4xl pt-[10%]" style="color: #ffffff;"></i>
       <h3 class="text-[white] text-base">NBA Gambling Model</h3>
       <p class="text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
-      </p>
+        Current project I am currently exploring that decides how best to spread money when sports betting in the NBA. Taking in data from PBPStats and building a neural network to determine how a player fares against another group of players, it will output accurate over-unders.      </p>
     </div>
     
     <div
@@ -386,10 +360,7 @@ let visible1 = false;
       <i class="fa-solid fa-network-wired text-4xl pt-[10%]" style="color: #ffffff;"></i>
       <h3 class="text-[white] text-base">Robotics Match Predictor</h3>
       <p class="text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
+        Win Predictor for FIRST Robotics with 85% accuracy; Using Sci-kit Learn, I coded cross validation (feature importance) by way of Random Forest Classifiers. In addition, ran a binary classification to train the data on accuracy. Data utilized from Statbotics API.
       </p>
     </div>
     
@@ -405,10 +376,7 @@ let visible1 = false;
       <i class="fa-solid fa-diagram-project text-4xl pt-[10%]" style="color: #ffffff;"></i>
       <h3 class="text-[white] text-base">K-Means Clustering</h3>
       <p class="text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
+        By way of unsupervised learning, I used the techniques for K-means clustering to find the similarities between a group of students in order to improve teaching techniques. Done for the Duke ASA DataFest Competition - Finalist.
       </p>
     </div>
 
@@ -424,7 +392,7 @@ let visible1 = false;
       <div class="flex flex-col">
         <h1 class="text-5xl mt-[5vh] text-center">resume</h1>
         <a
-          href="../../media/Resume (Ahmad Choudhary) (1).pdf"
+          href='../Resume (Ahmad Choudhary) (3).pdf'
           download
           on:mouseenter={() => {
             resume_hidden = true;
@@ -576,29 +544,19 @@ let visible1 = false;
           <div class="dinfo">
             <button class="cards lefter" on:click={rotateRight} on:keydown={(event) => handleKeydown(event, 'right')}>
               <div class="uniem"></div>
-              <h2>Resume</h2>
+              <h2>Hobbies</h2>
               <div class="rese mid">
                 <div class="lab">
-                  <p><span>Dark Matter Particle Research AI</span></p>
-                  <p>
-                    Learning unsupervised AI integration to train models to accurately
-                    predict decaying particle’s paths and movements.
-                    <br /><br />
-                    Coding in C/C++ to convert code into physical microchips while
-                    maintaining efficiency in runtime and costs for the optimal
-                    production.
-                  </p>
+                  <p><span>Sports</span></p>
+                  <p>Thoroughly keep up with the NBA and Formula 1. In the NBA I support the Warriors (Curry is my favorite player) and OKC Thunder (where I'm from). For F1, I support Mercedes as a team but Hamilton is my favorite driver so the move to Ferrari will be conflicting as I dislike Ferrari</p>
                 </div>
                 <div class="lab">
-                  <p><span>Quantitative Improvement of CT Imaging for Lung Diseases</span></p>
-                  <p>
-                    Utilizing software programs such as FEBio to model realistic lung
-                    designs in order to detect virus movements given different
-                    pressure loads.
-                    <br /><br />
-                    C++ program written in order to debug and create the tools
-                    necessary for testing.
-                  </p>
+                  <p><span>Film</span></p>
+                  <p>Love analyzing film making techniques and especially story-telling. TDK is my favorite movie. Hot Take: Slow movies like Blade Runner 2049 are overrated (Dune gets a pass for now).</p>
+                </div>
+                <div class="lab">
+                  <p><span>Coding</span></p>
+                  <p>Yep, I genuinely like programming. Always down to do a project</p>
                 </div>
               </div>
             </button>
@@ -634,28 +592,22 @@ let visible1 = false;
       
             <button class="cards righter" on:click={rotateRight} on:keydown={(event) => handleKeydown(event, 'right')}>
               <div class="uniem"></div>
-              <h2>Internships</h2>
+              <h2>Work Experience</h2>
               <div class="rese mid">
                 <div class="lab">
-                  <p><span>Dark Matter Particle Research AI</span></p>
+                  <p><span>NUSTIAN USA</span></p>
                   <p>
-                    Learning unsupervised AI integration to train models to accurately
-                    predict decaying particle’s paths and movements.
+                    Non-profit that helps Pakistani students who went to NUST University settle in and find oppurtunities. Also assists the school and upcoming students directly.
                     <br /><br />
-                    Coding in C/C++ to convert code into physical microchips while
-                    maintaining efficiency in runtime and costs for the optimal
-                    production.
+                    Assisted with strategy for the Pakistani flood reliefs during Covid and web development on WordPress. 
                   </p>
                 </div>
                 <div class="lab">
-                  <p><span>Quantitative Improvement of CT Imaging for Lung Diseases</span></p>
+                  <p><span>Duke ASA DataFest Strategist</span></p>
                   <p>
-                    Utilizing software programs such as FEBio to model realistic lung
-                    designs in order to detect virus movements given different
-                    pressure loads.
+                    Utilized Photoshop and Illustrator to create effective flyers as well as handling email marketing.
                     <br /><br />
-                    C++ program written in order to debug and create the tools
-                    necessary for testing.
+                    Updated the website and minor improvements on some features.
                   </p>
                 </div>
               </div>
@@ -684,14 +636,12 @@ let visible1 = false;
         </div>
       </div>
     </div>
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#000000" fill-opacity="1" d="M0,64L48,69.3C96,75,192,85,288,117.3C384,149,480,203,576,192C672,181,768,107,864,80C960,53,1056,75,1152,74.7C1248,75,1344,53,1392,42.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-    </svg>
-     -->
+
   <div id="about" class="w-[100vw] h-[100vh] text-white flex flex-col items-center text-5xl">
     <h1 class="mt-[5vh]">contact me</h1>
     <div class="mt-[10vh]">
-      <form class="text-[#a3a3a3] text-2xl flex flex-col items-start min-w-[300px] w-[20vw]">
+      <form action="https://api.web3forms.com/submit" method="POST" class="text-[#a3a3a3] text-2xl flex flex-col items-start min-w-[300px] w-[20vw]">
+        <input type="hidden" name="access_key" value="25fbf50d-b461-4093-afee-de809d5bd079">
         <label class="mt-[3vh] mb-[2vh]" for="fname"><h3>First & Last Name</h3></label>
         <input class="no-focus-border text-sm w-full bg-inherit border-b-2 border-b-neutral-600 pb-[1vh]" type="text" id="fname" name="fullname" placeholder="Your name.." required>
         <label class="mt-[3vh] mb-[2vh]" for="email"><h3>Email</h3></label>
@@ -710,10 +660,10 @@ let visible1 = false;
     <div
       class="text-[1vh] md:text-sm w-full max-w-[40vw] min-w-[350px] grid grid-cols-4 items-center absolute bottom-0"
     >
-      <p class="text-white mb-[1.5vh] justify-self-center">Linkedin</p>
-      <p class="text-white mb-[1.5vh] justify-self-center">Instagram</p>
-      <p class="text-white mb-[1.5vh] justify-self-center">Email</p>
-      <p class="text-white mb-[1.5vh] justify-self-center">Github</p>
+      <a href="https://www.linkedin.com/in/ahmad-choudhary" class="text-white mb-[1.5vh] justify-self-center">Linkedin</a>
+      <a href="https://www.instagram.com/ahmad.s.choudhary/" class="text-white mb-[1.5vh] justify-self-center">Instagram</a>
+      <a href= "mailto: asc113@duke.edu" class="text-white mb-[1.5vh] justify-self-center">Email</a>
+      <a href="https://github.com/2Ahmad5" class="text-white mb-[1.5vh] justify-self-center">Github</a>
     </div>
   </div>
 </div>
@@ -725,9 +675,6 @@ let visible1 = false;
 .temp{
     position: relative;
 }
-
-
-
 
 .dinfo {
     position: relative;
@@ -1372,7 +1319,7 @@ let visible1 = false;
   }
 
   .nuwrld {
-    background-image: url("../../media/NuWrld Sound Page.png");
+    background-image: url("../../media/Stock Website.png");
     background-position: center;
     background-size: cover;
   }
