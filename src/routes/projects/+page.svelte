@@ -248,7 +248,7 @@ let visible1 = false;
   </div>
 </button>
     <div
-      class="bigonly grid w-full text-[1vh] md:text-sm text-white max-w-[25vw] min-w-[360px] grid-cols-4 mt-[10vh] mb-[15vh]"
+      class="bigonly flex w-full text-[1vh] md:text-sm text-white gap-[6vh] max-w-[25vw] min-w-[360px] mt-[10vh] mb-[15vh]"
     >
       <button
         class="hover:cursor-fancy text-2xl {proj
@@ -338,21 +338,22 @@ let visible1 = false;
       use:inView
       on:enter={handleEnter1}
       on:exit={handleExit1}
-      class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh] transition-transform"
+      class="w-[90vw] h-[36vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh] transition-transform"
       class:visible={visible1}
       class:invisible={!visible1}
     >
       <i class="fa-solid fa-basketball text-4xl pt-[10%]" style="color: #ffffff;"></i>
       <h3 class="text-[white] text-base">NBA Gambling Model</h3>
-      <p class="text-sm">
-        Current project I am currently exploring that decides how best to spread money when sports betting in the NBA. Taking in data from PBPStats and building a neural network to determine how a player fares against another group of players, it will output accurate over-unders.      </p>
+        <p class="text-sm">
+          Current project I am currently exploring that decides how best to spread money when sports betting in the NBA. Taking in data from PBPStats and building a neural network to determine how a player fares against another group of players, it will output accurate over-unders. </p>
+     
     </div>
     
     <div
       use:inView
       on:enter={handleEnter2}
       on:exit={handleExit2}
-      class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh] transition-transform"
+      class="w-[90vw] h-[36vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh] transition-transform"
       class:visible={visible2}
       class:invisible={!visible2}
       style="transition-delay: 0.15s;"
@@ -368,7 +369,7 @@ let visible1 = false;
       use:inView
       on:enter={handleEnter3}
       on:exit={handleExit3}
-      class="w-[90vw] h-[32vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh] transition-transform"
+      class="w-[90vw] h-[36vh] card-back border-2 rounded-xl xl:w-[23vw] flex flex-col p-[20px] gap-[2vh] transition-transform"
       class:visible={visible3}
       class:invisible={!visible3}
       style="transition-delay: 0.3s;"
@@ -394,18 +395,13 @@ let visible1 = false;
         <a
           href='../Resume (Ahmad Choudhary) (3).pdf'
           download
-          on:mouseenter={() => {
-            resume_hidden = true;
-          }}
-          on:mouseleave={() => {
-            resume_hidden = false;
-          }}
+          
           class="resume-contain rounded-xl mt-[2vh] relative"
         >
           <div
-            class="{!resume_hidden
-              ? 'opacity-100'
-              : 'opacity-0'} convert resume-bkg w-[461px] h-[564px] rounded-xl"
+            class="{
+              'opacity-100'
+             } convert resume-bkg w-[461px] h-[564px] rounded-xl"
           ></div>
         </a>
       </div>
@@ -548,7 +544,7 @@ let visible1 = false;
               <div class="rese mid">
                 <div class="lab">
                   <p><span>Sports</span></p>
-                  <p>Thoroughly keep up with the NBA and Formula 1. In the NBA I support the Warriors (Curry is my favorite player) and OKC Thunder (where I'm from). For F1, I support Mercedes as a team but Hamilton is my favorite driver so the move to Ferrari will be conflicting as I dislike Ferrari</p>
+                  <p>Thoroughly keep up with the NBA and Formula 1. In the NBA I support the Warriors (Curry is my favorite player) and OKC Thunder (where I'm from). King Lewis for F1</p>
                 </div>
                 <div class="lab">
                   <p><span>Film</span></p>
@@ -770,10 +766,10 @@ let visible1 = false;
 }
 
 .rese{
-    display: grid;
-    
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 4vh;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    grid-gap: 2vh;
 }
 
 .rese span{
@@ -1189,9 +1185,9 @@ let visible1 = false;
     transition: all 0.3s ease-out;
   }
 
-  .resume-contain:hover {
+  /* .resume-contain:hover {
     transform: perspective(1000px) rotate3d(1, 0, 0, 45deg);
-  }
+  } */
 
   .yes-click {
     color: white;
