@@ -3,7 +3,7 @@
 </svelte:head>
 
 
-<div class="w-screen h-full flex flex-col justify-center items-center cursor-fancy overflow-x-hidden">
+<div class="w-screen h-screen flex flex-col justify-center items-center cursor-fancy overflow-x-hidden">
     <h1 class="text-5xl text-center mb-5">Ahmad Choudhary</h1>
     <hr class="w-[30svh] h-0.5 mx-auto bg-white border-0 rounded my-4">
     <div class="max-w-[450px] px-5 text-justify text-white text-lg">

@@ -401,7 +401,7 @@ let visible1 = false;
           <div
             class="{
               'opacity-100'
-             } convert resume-bkg w-[461px] h-[564px] rounded-xl"
+             } convert resume-bkg w-[461px] h-[585px] rounded-xl"
           ></div>
         </a>
       </div>
