@@ -393,7 +393,7 @@ let visible1 = false;
       <div class="flex flex-col">
         <h1 class="text-5xl mt-[5vh] text-center">resume</h1>
         <a
-          href='../Resume (Ahmad Choudhary) (3).pdf'
+          href='../Resume.pdf'
           download
           
           class="resume-contain rounded-xl mt-[2vh] relative"
