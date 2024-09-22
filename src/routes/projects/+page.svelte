@@ -6,12 +6,12 @@
   import { onMount } from 'svelte';
   import inView from '../../components/inView';
 
-onMount(() => {
-  if (!window.location.hash) {
-    window.location.hash = 'loaded';
-    window.location.reload();
-  }
-});
+// onMount(() => {
+//   if (!window.location.hash) {
+//     window.location.hash = 'loaded';
+//     window.location.reload();
+//   }
+// });
 
 let cardElements;
   let isVisible1 = false;

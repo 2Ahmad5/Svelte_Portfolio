@@ -2,15 +2,22 @@
   
 </svelte:head>
 
+<script>
+// @ts-nocheck
 
-<div class="w-screen h-screen flex flex-col justify-center items-center cursor-fancy overflow-x-hidden">
+
+</script>
+
+
+<div class="w-screen h-[100vh] flex flex-col justify-center items-center cursor-fancy overflow-x-hidden">
     <h1 class="text-5xl text-center mb-5">Ahmad Choudhary</h1>
     <hr class="w-[30svh] h-0.5 mx-auto bg-white border-0 rounded my-4">
     <div class="max-w-[450px] px-5 text-justify text-white text-lg">
         <p>Hi! On this website, you’ll get to know everything relevant you need to know about me. From my highschool projects where it all began to my current explorations in ML to even my hobbies, I have attempted to include a portfolio in which you can fully understand my character. Admittedly, the website still isn’t completely finished although I will be constantly updating it and improving it as time allows. If you have further questions or recommendations please feel free to message me. Other than that, let’s check it out!</p>
     </div>
     <hr class="w-[30svh] h-0.5 mx-auto bg-white border-0 rounded my-4">
-    <a href="/projects" class="cursor-fancy w-[20svh] h-[6svh] flex justify-center items-center border-2 text-[#a5a4a3] border-white rounded-3xl mt-5 gap-2 hover:bg-white hover:text-black group">
+    
+    <a data-sveltekit-reload href="/projects" class="cursor-fancy w-[20svh] h-[6svh] flex justify-center items-center border-2 text-[#a5a4a3] border-white rounded-3xl mt-5 gap-2 hover:bg-white hover:text-black group">
         <div>
             <h2 class="transition-opacity duration-300 ease-in-out">Lets Go</h2>
         </div>
@@ -56,6 +63,10 @@
 
   p{
     color: #a5a4a3;
+  }
+
+  .a:hover :global(body){
+      background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
   }
 
   .group:hover h2 {
