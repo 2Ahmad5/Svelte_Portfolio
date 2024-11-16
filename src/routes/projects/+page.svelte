@@ -342,10 +342,10 @@ let visible1 = false;
       class:visible={visible1}
       class:invisible={!visible1}
     >
-      <i class="fa-solid fa-basketball text-4xl pt-[10%]" style="color: #ffffff;"></i>
-      <h3 class="text-[white] text-base">NBA Gambling Model</h3>
+      <i class="fa-solid fa-money-bill-trend-up text-4xl pt-[10%]" style="color: #ffffff;"></i>
+      <h3 class="text-[white] text-base">LSTM Time Series Model</h3>
         <p class="text-sm">
-          Current project I am currently exploring that decides how best to spread money when sports betting in the NBA. Taking in data from PBPStats and building a neural network to determine how a player fares against another group of players, it will output accurate over-unders. </p>
+           Utilized a Long Short-Term Memory time series forecasting model to accurately predict stock prices for any publicly traded company for up to a month. Most accurate for within a week</p>
      
     </div>
     
@@ -504,7 +504,7 @@ let visible1 = false;
                 <li class="flex max-w-full border-b-neutral-600 border-b-2 pb-[2vh] pt-[2vh]">
                     <p class="w-full text-white">Minor</p>
                     
-                    <p class="whitespace-nowrap text-white text-sm align-text-bottom">Finance <span class="text-[#a5a4a3]">/ Math</span></p>
+                    <p class="whitespace-nowrap text-white text-sm align-text-bottom">Finance <span class="text-[#a5a4a3]">/ Physics</span></p>
                 </li>
                 <li class="flex max-w-full border-b-neutral-600 border-b-2 pb-[2vh] pt-[2vh]">
                     <p class="w-full text-white">Year</p>
@@ -519,7 +519,7 @@ let visible1 = false;
                 <li class="flex max-w-full border-b-neutral-600 border-b-2 pb-[2vh] pt-[2vh]">
                     <p class="w-full text-white">GPA</p>
                     
-                    <p class="whitespace-nowrap text-white text-sm align-text-bottom">3.75 <span class="text-[#a5a4a3]"></span></p>
+                    <p class="whitespace-nowrap text-white text-sm align-text-bottom">3.76 <span class="text-[#a5a4a3]"></span></p>
                 </li>
                 <li class="flex max-w-full border-b-neutral-600 border-b-2 pb-[2vh] pt-[2vh]">
                     <p class="w-full text-white">Courses Taken</p>
@@ -564,23 +564,25 @@ let visible1 = false;
                 <div class="lab">
                   <p><span>Dark Matter Particle Research AI</span></p>
                   <p>
-                    Learning unsupervised AI integration to train models to accurately
-                    predict decaying particle’s paths and movements.
+                    Unsupervised AI integration to train models to
+                    predict decaying particle’s paths and movements. Convering C++ code into physical microchips
+                    maintaining efficiency in runtime and costs.
+                  </p>
+                </div>
+                <div class="lab">
+                  <p><span>Object Obstruction Augmented Reality</span></p>
+                  <p>
+                    Advanced ML models in Computer Vision to track users eye movement and display important information.
                     <br /><br />
-                    Coding in C/C++ to convert code into physical microchips while
-                    maintaining efficiency in runtime and costs for the optimal
-                    production.
+                    Python + C# in Unity to create a seamless AR environment that is safe for users.
                   </p>
                 </div>
                 <div class="lab">
                   <p><span>Quantitative Improvement of CT Imaging for Lung Diseases</span></p>
                   <p>
-                    Utilizing software programs such as FEBio to model realistic lung
+                    Utilizing software programs to model realistic lung
                     designs in order to detect virus movements given different
-                    pressure loads.
-                    <br /><br />
-                    C++ program written in order to debug and create the tools
-                    necessary for testing.
+                    pressure loads. Programmed in C++.
                   </p>
                 </div>
               </div>
@@ -589,21 +591,26 @@ let visible1 = false;
             <button class="cards righter" on:click={rotateRight} on:keydown={(event) => handleKeydown(event, 'right')}>
               <div class="uniem"></div>
               <h2>Work Experience</h2>
+              
               <div class="rese mid">
                 <div class="lab">
-                  <p><span>NUSTIAN USA</span></p>
+                  <p><span>Software Engineering - Duke Fuqua School of Business</span></p>
                   <p>
-                    Non-profit that helps Pakistani students who went to NUST University settle in and find oppurtunities. Also assists the school and upcoming students directly.
+                    Created a fullstack stock investment portfolio efficiencies application alongside a professor. 
                     <br /><br />
-                    Assisted with strategy for the Pakistani flood reliefs during Covid and web development on WordPress. 
+                    Technologies such as FlaskAPI, openDB, Svelte, HTML, CSS, and JS were utilized to enchance experience for 100+ MBA students.
                   </p>
                 </div>
                 <div class="lab">
-                  <p><span>Duke ASA DataFest Strategist</span></p>
+                  <p><span>Web Developer - Nustian USA</span></p>
+                  <p>
+                    Non-profit for Pakistani students from NUST. Assisted with strategy for the Pakistani flood reliefs during Covid and web development on WordPress. 
+                  </p>
+                </div>
+                <div class="lab">
+                  <p><span>Design/Strategist - Duke ASA Datafest</span></p>
                   <p>
                     Utilized Photoshop and Illustrator to create effective flyers as well as handling email marketing.
-                    <br /><br />
-                    Updated the website and minor improvements on some features.
                   </p>
                 </div>
               </div>
@@ -884,6 +891,10 @@ let visible1 = false;
   font-family: "Roboto", sans-serif;
 }
 
+form {
+  font-family: "Exo 2", sans-serif;
+}
+
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -917,7 +928,11 @@ let visible1 = false;
   rgb(50, 50, 50) 0%,
   rgb(0, 0, 0) 80% 
 );
+font-family: "Exo 2", sans-serif;
+  }
 
+  #about h3{
+    font-family: "Exo 2", sans-serif;
   }
 
   .okla{
